@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Chat Container */
+.chat-container {
+    width: 380px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+.chat-header {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Chat Messages */
+.chat-message {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.user {
+    background: #4caf50;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.bot {
+    background: #1e3799;
+    color: white;
+    align-self: flex-start;
+}
+
+/* Input Section */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.chat-input input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chat-input button {
+    background: #ff4081;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.chat-input button i {
+    color: white;
+    font-size: 18px;
+}
+
+.chat-input button:hover {
+    background: #ff79a1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
